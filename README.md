@@ -1,17 +1,14 @@
 # Libft - @42Born2Code
 
 My implementation of some of the Standard C Library functions including some additional ones.
+
 NOTE: this README.md is largely inspired by [@R4meau](https://github.com/R4meau/). So go check his [projects](https://github.com/R4meau/)!
 
 ## Table of Contents
 * What is libft?
 * What's in it?
 * How does it work?
-* How do I use the library?
-* How do I test it? How do I test my own implementations?
-   - To test the code in this repo
-   - To test your own code
-* Example usage
+* How do I test it?
 
 ## What is libft?
 [Libft]() is an individual project at [42](https://www.42.us.org/) that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
@@ -54,3 +51,22 @@ As you can see from the [Project instructions], there are 3 sections:
 | toupper         |                      |                 |
 | tolower         |                      |                 |
 
+Notes:
+ - Most of the function names are prefixed with "ft_" which stands for Fourty-Two
+ - My code successfully passed all the 42 tests
+
+## How does it work?
+The goal is to create a library called libft.a from the source files so I can later use that library from other projects at 42.
+
+To create that library, after downloading/cloning this project, cd into the project and call `make all`:
+```
+git clone https://github.com/gguarnay/42/libft
+cd libft
+make all
+```
+You will see a *libft.a* file and binary files (.o).
+To clean up the binary files, you may call `make clean`
+
+# How do I test it?
+ - Use [42FileChecker]https://github.com/jgigault/42FileChecker)
+ - Use [Moulibft](https://www.moulibft.com/)
