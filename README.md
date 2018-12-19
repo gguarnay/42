@@ -5,10 +5,10 @@ My implementation of some of the Standard C Library functions including some add
 NOTE: this README.md is largely inspired by [@R4meau](https://github.com/R4meau/). So go check his [projects](https://github.com/R4meau/)!
 
 ## Table of Contents
-* What is libft?
-* What's in it?
-* How does it work?
-* How do I test it?
+* [What is libft?](https://github.com/gguarnay/42#what-is-libft)
+* [What's in it?](https://github.com/gguarnay/42#whats-in-it)
+* [How does it work?](https://github.com/gguarnay/42#how-does-it-work)
+* [How do I test it?](https://github.com/gguarnay/42#how-do-i-test-it)
 
 ## What is libft?
 [Libft]() is an individual project at [42](https://www.42.us.org/) that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
@@ -67,6 +67,6 @@ make all
 You will see a *libft.a* file and binary files (.o).
 To clean up the binary files, you may call `make clean`
 
-# How do I test it?
+## How do I test it?
  - Use [42FileChecker](https://github.com/jgigault/42FileChecker)
  - Use [Moulibft](https://www.moulibft.com/)
