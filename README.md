@@ -68,5 +68,5 @@ You will see a *libft.a* file and binary files (.o).
 To clean up the binary files, you may call `make clean`
 
 # How do I test it?
- - Use [42FileChecker]https://github.com/jgigault/42FileChecker)
+ - Use [42FileChecker](https://github.com/jgigault/42FileChecker)
  - Use [Moulibft](https://www.moulibft.com/)
