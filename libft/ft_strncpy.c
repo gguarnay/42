@@ -6,7 +6,7 @@
 /*   By: gguarnay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 23:24:11 by gguarnay          #+#    #+#             */
-/*   Updated: 2018/12/07 23:29:40 by gguarnay         ###   ########.fr       */
+/*   Updated: 2018/12/13 23:25:20 by gguarnay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 		dst[i] = '\0';
 		i++;
 	}
-	dst[i] = '\0';
 	return (dst);
 }

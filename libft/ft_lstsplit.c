@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_lstsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gguarnay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/05 22:14:44 by gguarnay          #+#    #+#             */
-/*   Updated: 2018/12/13 23:56:22 by gguarnay         ###   ########.fr       */
+/*   Created: 2018/12/15 19:33:46 by gguarnay          #+#    #+#             */
+/*   Updated: 2018/12/15 19:52:32 by gguarnay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,10 @@ static size_t	ft_next_start(char const *s, size_t start, size_t len, char c)
 	return (i);
 }
 
-char			**ft_strsplit(char const *s, char c)
+t_list			*ft_lstsplit(char const *s, char c)
 {
 	size_t	wc;
-	char	**tab;
+	t_list	*lst;
 	size_t	*wlen;
 	size_t	i;
 	size_t	start;
@@ -79,18 +79,15 @@ char			**ft_strsplit(char const *s, char c)
 	while (*s == c)
 		s++;
 	wc = ft_wc(s, c);
-	if (!(tab = (char **)malloc(sizeof(char *) * (wc + 1))))
-		return (NULL);
 	wlen = ft_wlen_arr(s, c, wc);
 	i = 0;
 	start = 0;
 	while (i < wc)
 	{
-		tab[i] = ft_strsub(s, start, wlen[i]);
+		ft_lstpushback(&lst, ft_lstnew(ft_strsub(s, start, wlen[i]), wlen[i]));
 		start = ft_next_start(s, start, wlen[i], c);
 		i++;
 	}
-	tab[i] = 0;
 	free(wlen);
-	return (tab);
+	return (lst);
 }

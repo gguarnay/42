@@ -6,7 +6,7 @@
 /*   By: gguarnay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 20:18:07 by gguarnay          #+#    #+#             */
-/*   Updated: 2018/12/06 22:34:51 by gguarnay         ###   ########.fr       */
+/*   Updated: 2018/12/13 21:35:20 by gguarnay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char			*ft_itoa(int n)
 	size_t	i;
 
 	if (n == INT_MIN)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	len = ft_nb_digit(n);
 	r = ft_strnew(len);
 	i = 0;

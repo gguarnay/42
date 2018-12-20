@@ -6,7 +6,7 @@
 /*   By: gguarnay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 19:48:14 by gguarnay          #+#    #+#             */
-/*   Updated: 2018/12/05 20:28:26 by gguarnay         ###   ########.fr       */
+/*   Updated: 2018/12/13 23:09:39 by gguarnay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	long	len;
 	long	i;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	str = ft_strnew(len);
+	if (!(str = ft_strnew(len)))
+		return (NULL);
 	i = 0;
 	while (*s1)
 	{

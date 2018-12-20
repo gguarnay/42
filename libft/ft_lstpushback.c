@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_listpushback.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gguarnay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/05 16:28:47 by gguarnay          #+#    #+#             */
-/*   Updated: 2018/12/15 21:48:00 by gguarnay         ###   ########.fr       */
+/*   Created: 2018/12/15 19:42:52 by gguarnay          #+#    #+#             */
+/*   Updated: 2018/12/15 20:30:24 by gguarnay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_lstpushback(t_list **begin_list, t_list *new)
 {
-	unsigned int i;
+	t_list *current;
 
-	i = 0;
-	if (f)
+	if (!(*begin_list))
+		*begin_list = new;
+	else
 	{
-		while (*s)
-		{
-			f(i, s);
-			i++;
-			s++;
-		}
+		current = *begin_list;
+		while (current->next)
+			current = current->next;
+		current->next = new;
 	}
 }

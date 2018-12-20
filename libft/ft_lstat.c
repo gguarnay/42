@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstat.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gguarnay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/05 16:28:47 by gguarnay          #+#    #+#             */
-/*   Updated: 2018/12/15 21:48:00 by gguarnay         ###   ########.fr       */
+/*   Created: 2018/12/15 20:13:48 by gguarnay          #+#    #+#             */
+/*   Updated: 2018/12/15 20:16:24 by gguarnay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+t_list	*ft_lstat(t_list *begin_list, size_t nbr)
 {
-	unsigned int i;
+	size_t	i;
+	t_list	*list;
 
+	list = begin_list;
 	i = 0;
-	if (f)
+	if (!(begin_list))
+		return (NULL);
+	while (list)
 	{
-		while (*s)
-		{
-			f(i, s);
-			i++;
-			s++;
-		}
+		if (i == nbr)
+			return (list);
+		list = list->next;
+		i++;
 	}
+	return (NULL);
 }

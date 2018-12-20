@@ -6,7 +6,7 @@
 /*   By: gguarnay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 12:33:25 by gguarnay          #+#    #+#             */
-/*   Updated: 2018/12/08 23:24:54 by gguarnay         ###   ########.fr       */
+/*   Updated: 2018/12/15 20:56:22 by gguarnay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,11 +75,18 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
+size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *h, const char *n, size_t len);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+void				ft_lstpushback(t_list **begin_list, t_list *new);
+size_t				ft_lstsize(t_list *begin_list);
+t_list				*ft_lstlast(t_list *begin_list);
+t_list				*ft_lstat(t_list *begin_list, size_t nbr);
+void				ft_printbits(unsigned char octet);
+t_list				*ft_lstsplit(char const *s, char c);
 
 #endif

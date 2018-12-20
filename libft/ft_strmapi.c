@@ -6,7 +6,7 @@
 /*   By: gguarnay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 18:22:00 by gguarnay          #+#    #+#             */
-/*   Updated: 2018/12/06 17:39:22 by gguarnay         ###   ########.fr       */
+/*   Updated: 2018/12/13 23:06:22 by gguarnay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,17 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t			len;
 	unsigned int	i;
 
+	if (!s || !f)
+		return (NULL);
 	len = ft_strlen(s);
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
 	i = 0;
 	if (f)
 	{
 		while (*s)
 		{
-			str[i] = f(i, *s);
+			str[i] = (*f)(i, *s);
 			i++;
 			s++;
 		}

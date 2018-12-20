@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_printbits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gguarnay <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/05 16:28:47 by gguarnay          #+#    #+#             */
-/*   Updated: 2018/12/15 21:48:00 by gguarnay         ###   ########.fr       */
+/*   Created: 2018/12/15 20:50:47 by gguarnay          #+#    #+#             */
+/*   Updated: 2018/12/15 20:51:06 by gguarnay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_printbits(unsigned char octet)
 {
-	unsigned int i;
+	int i;
 
-	i = 0;
-	if (f)
+	i = 7;
+	while (i >= 0)
 	{
-		while (*s)
-		{
-			f(i, s);
-			i++;
-			s++;
-		}
+		ft_putchar(((octet >> i) & 1) + '0');
+		i--;
 	}
 }
