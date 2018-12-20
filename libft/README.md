@@ -6,9 +6,9 @@ NOTE: this README.md is largely inspired by [@R4meau](https://github.com/R4meau/
 
 ## Table of Contents
 * [What is libft?](#what-is-libft)
-* [What's in it?](https://github.com/gguarnay/42#whats-in-it)
-* [How does it work?](https://github.com/gguarnay/42#how-does-it-work)
-* [How do I test it?](https://github.com/gguarnay/42#how-do-i-test-it)
+* [What's in it?](#whats-in-it)
+* [How does it work?](#how-does-it-work)
+* [How do I test it?](#how-do-i-test-it)
 
 ## What is libft?
 [Libft](libft.en.pdf) is an individual project at [42](https://www.42.us.org/) that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
