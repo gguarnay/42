@@ -14,7 +14,9 @@ Repository of my work during the 42 program, that follows a logical sequence of 
 ## Download
 
 Just run the following command:
+
 `git clone --recursive https://github.com/gguarnay/42.git`
+
 This will clone the repository, plus all the submodules, the projects, the piscines, and the exams.
 
 NOTE: this README.md is largely inspired by [@jraleman](https://github.com/jraleman). So go check his [projects](https://github.com/jraleman)!
