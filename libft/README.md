@@ -11,7 +11,7 @@ NOTE: this README.md is largely inspired by [@R4meau](https://github.com/R4meau/
 * [How do I test it?](https://github.com/gguarnay/42#how-do-i-test-it)
 
 ## What is libft?
-[Libft]() is an individual project at [42](https://www.42.us.org/) that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
+[Libft](libft.en.pdf) is an individual project at [42](https://www.42.us.org/) that requires us to re-create some standard C library functions including some additional ones that can be used later to build a library of useful functions for the rest of the program.
 
 Disclaimer: *Reinventing the wheel is bad, 42 makes us do this just so we can have a deeper understanding of data structures and basic algorithms. At 42 we're not allowed to use some standard libraries on our projects, so we have to keep growing this library with our own functions as we go farther in the program.* 
 
