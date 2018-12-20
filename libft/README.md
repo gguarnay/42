@@ -5,7 +5,7 @@ My implementation of some of the Standard C Library functions including some add
 NOTE: this README.md is largely inspired by [@R4meau](https://github.com/R4meau/). So go check his [projects](https://github.com/R4meau/)!
 
 ## Table of Contents
-* [What is libft?](https://github.com/gguarnay/42#what-is-libft)
+* [What is libft?](42#what-is-libft)
 * [What's in it?](https://github.com/gguarnay/42#whats-in-it)
 * [How does it work?](https://github.com/gguarnay/42#how-does-it-work)
 * [How do I test it?](https://github.com/gguarnay/42#how-do-i-test-it)
