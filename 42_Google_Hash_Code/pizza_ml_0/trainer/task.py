@@ -33,7 +33,7 @@ C = 5
 OBSERVATION_DIM = R * C * 2 + 5 # give ingredient map (RxC), map of slices (RxC) ....cursor position (2x1) x slice_mode (1)  and your constraints L, H (2)
 
 MEMORY_CAPACITY = 100000
-ROLLOUT_SIZE = 10000
+ROLLOUT_SIZE = 50 #10000
 
 # MEMORY stores tuples:
 # (observation, label, reward)
@@ -227,8 +227,15 @@ def main(args):
 					#	epoch_memory = []
 					#	continue
 
-				if len(epoch_memory) >= ROLLOUT_SIZE:
-					break
+					if len(epoch_memory) >= ROLLOUT_SIZE:
+						break
+				
+					game = Game({'max_steps':10000}) # initialize game from game.py
+					h = random.randint(1, R * C + 1)			
+					l = random.randint(1, h // 2 + 1)
+					pizza_lines = [''.join([random.choice("MT") for _ in range(C)]) for _ in range(R)]
+					pizza_config = { 'pizza_lines': pizza_lines, 'r': R, 'c': C, 'l': l, 'h': h }
+					_observation = preprocess(game.init(pizza_config)[0])  #np.zeros(OBSERVATION_DIM) #get only first value of tuple
 
 			# add to the global memory
 			MEMORY.extend(epoch_memory)
